@@ -1,0 +1,123 @@
+﻿/*************************************************
+** auth： zsh2401@163.com
+** date:  2018/9/28 4:02:30 (UTC +8:00)
+** desc： ...
+*************************************************/
+using AutumnBox.Basic.Data;
+using System;
+
+namespace AutumnBox.Basic.Device.Management.OS
+{
+    /// <summary>
+    /// build.prop管理器
+    /// </summary>
+    [Obsolete("无使用,即将移除", true)]
+    public sealed class DeviceBuildPropManager : DeviceCommander
+    {
+        /// <summary>
+        /// 获取器
+        /// </summary>
+        private DeviceBuildPropGetter Getter
+        {
+            get
+            {
+                if (_getter == null)
+                {
+                    _getter = new DeviceBuildPropGetter(Device);
+                }
+                return _getter;
+            }
+            set
+            {
+                //if (_getter != null)
+                //{
+                //    _setter.OutputReceived -= RaiseOutput;
+                //}
+                //_getter = value;
+                //_getter.OutputReceived += RaiseOutput;
+            }
+        }
+        private DeviceBuildPropGetter _getter;
+        /// <summary>
+        /// 设置器
+        /// </summary>
+        private DeviceBuildPropSetter Setter
+        {
+            get
+            {
+                if (_setter == null)
+                {
+                    _setter = new DeviceBuildPropSetter(Device);
+                }
+                return _setter;
+            }
+            set
+            {
+                //if (_setter != null)
+                //{
+                //    _setter.OutputReceived -= RaiseOutput;
+                //}
+                //_setter = value;
+                //_setter.OutputReceived += RaiseOutput;
+            }
+        }
+        private DeviceBuildPropSetter _setter;
+        /// <summary>
+        /// 构造管理器
+        /// </summary>
+        /// <param name="device"></param>
+        public DeviceBuildPropManager(IDevice device) : base(device)
+        {
+            //ShellCommandHelper.CommandExistsCheck(device,"getprop");
+            //ShellCommandHelper.CommandExistsCheck(device,"setprop");
+        }
+        /// <summary>
+        /// 获取或设置键值
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        /// <exception cref="Exceptions.AdbShellCommandFailedException"></exception>
+        public string this[string key]
+        {
+            get
+            {
+                return Get(key);
+            }
+            set
+            {
+                Set(key, value);
+            }
+        }
+        /// <summary>
+        /// 获取键值
+        /// </summary>
+        /// <param name="key"></param>
+        /// <returns></returns>
+        /// <exception cref="Exceptions.AdbShellCommandFailedException"></exception>
+        public string Get(string key)
+        {
+            if (string.IsNullOrEmpty(key))
+            {
+                throw new ArgumentException("message", nameof(key));
+            }
+            //Getter.CmdStation = this.CmdStation;
+            return Getter.Get(key);
+        }
+        /// <summary>
+        /// 设置键值
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="value"></param>
+        /// <exception cref="Exceptions.AdbShellCommandFailedException"></exception>
+        public void Set(string key, string value)
+        {
+            if (string.IsNullOrEmpty(key))
+            {
+                throw new ArgumentException("message", nameof(key));
+            }
+
+            //Setter.CmdStation = this.CmdStation;
+            Setter.Set(key, value);
+        }
+    }
+}

@@ -93,9 +93,10 @@
             // mass
             // 
             this.mass.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.mass.Location = new System.Drawing.Point(32, 304);
+            this.mass.Location = new System.Drawing.Point(43, 380);
+            this.mass.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mass.Name = "mass";
-            this.mass.Size = new System.Drawing.Size(147, 39);
+            this.mass.Size = new System.Drawing.Size(196, 49);
             this.mass.TabIndex = 18;
             this.mass.Text = "进入大容量模式";
             this.mass.UseVisualStyleBackColor = true;
@@ -109,63 +110,72 @@
             this.groupBox14.Controls.Add(this.sharepart);
             this.groupBox14.Controls.Add(this.installdrive);
             this.groupBox14.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox14.Location = new System.Drawing.Point(213, 247);
+            this.groupBox14.Location = new System.Drawing.Point(284, 309);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(299, 155);
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox14.Size = new System.Drawing.Size(399, 194);
             this.groupBox14.TabIndex = 17;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "其他";
             // 
             // ISOs
             // 
-            this.ISOs.Location = new System.Drawing.Point(151, 110);
+            this.ISOs.Location = new System.Drawing.Point(201, 138);
+            this.ISOs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ISOs.Name = "ISOs";
-            this.ISOs.Size = new System.Drawing.Size(142, 39);
+            this.ISOs.Size = new System.Drawing.Size(189, 49);
             this.ISOs.TabIndex = 9;
             this.ISOs.Text = "下载更多系统镜像";
             this.ISOs.UseVisualStyleBackColor = true;
             // 
             // ISO
             // 
-            this.ISO.Location = new System.Drawing.Point(7, 110);
+            this.ISO.Location = new System.Drawing.Point(9, 138);
+            this.ISO.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ISO.Name = "ISO";
-            this.ISO.Size = new System.Drawing.Size(138, 39);
+            this.ISO.Size = new System.Drawing.Size(184, 49);
             this.ISO.TabIndex = 8;
             this.ISO.Text = "下载推荐系统镜像";
             this.ISO.UseVisualStyleBackColor = true;
             // 
             // video
             // 
-            this.video.Location = new System.Drawing.Point(152, 67);
+            this.video.Location = new System.Drawing.Point(203, 84);
+            this.video.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.video.Name = "video";
-            this.video.Size = new System.Drawing.Size(141, 39);
+            this.video.Size = new System.Drawing.Size(188, 49);
             this.video.TabIndex = 7;
             this.video.Text = "官方操作视频";
             this.video.UseVisualStyleBackColor = true;
             // 
             // mindows
             // 
-            this.mindows.Location = new System.Drawing.Point(7, 67);
+            this.mindows.Location = new System.Drawing.Point(9, 84);
+            this.mindows.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mindows.Name = "mindows";
-            this.mindows.Size = new System.Drawing.Size(139, 39);
+            this.mindows.Size = new System.Drawing.Size(185, 49);
             this.mindows.TabIndex = 6;
             this.mindows.Text = "Mindows官网";
             this.mindows.UseVisualStyleBackColor = true;
+            this.mindows.Click += new System.EventHandler(this.mindows_Click);
             // 
             // sharepart
             // 
-            this.sharepart.Location = new System.Drawing.Point(152, 25);
+            this.sharepart.Location = new System.Drawing.Point(203, 31);
+            this.sharepart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sharepart.Name = "sharepart";
-            this.sharepart.Size = new System.Drawing.Size(141, 39);
+            this.sharepart.Size = new System.Drawing.Size(188, 49);
             this.sharepart.TabIndex = 5;
             this.sharepart.Text = "安卓挂载共享空间";
             this.sharepart.UseVisualStyleBackColor = true;
             // 
             // installdrive
             // 
-            this.installdrive.Location = new System.Drawing.Point(7, 25);
+            this.installdrive.Location = new System.Drawing.Point(9, 31);
+            this.installdrive.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.installdrive.Name = "installdrive";
-            this.installdrive.Size = new System.Drawing.Size(139, 39);
+            this.installdrive.Size = new System.Drawing.Size(185, 49);
             this.installdrive.TabIndex = 4;
             this.installdrive.Text = "安装驱动";
             this.installdrive.UseVisualStyleBackColor = true;
@@ -179,63 +189,71 @@
             this.groupBox13.Controls.Add(this.disdsv);
             this.groupBox13.Controls.Add(this.fixesp);
             this.groupBox13.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox13.Location = new System.Drawing.Point(518, 211);
+            this.groupBox13.Location = new System.Drawing.Point(691, 264);
+            this.groupBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(319, 191);
+            this.groupBox13.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox13.Size = new System.Drawing.Size(425, 239);
             this.groupBox13.TabIndex = 16;
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "修复";
             // 
             // fix4g
             // 
-            this.fix4g.Location = new System.Drawing.Point(162, 141);
+            this.fix4g.Location = new System.Drawing.Point(216, 176);
+            this.fix4g.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fix4g.Name = "fix4g";
-            this.fix4g.Size = new System.Drawing.Size(136, 39);
+            this.fix4g.Size = new System.Drawing.Size(181, 49);
             this.fix4g.TabIndex = 5;
             this.fix4g.Text = "修复数据流量";
             this.fix4g.UseVisualStyleBackColor = true;
             // 
             // fixdisk
             // 
-            this.fixdisk.Location = new System.Drawing.Point(17, 141);
+            this.fixdisk.Location = new System.Drawing.Point(23, 176);
+            this.fixdisk.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fixdisk.Name = "fixdisk";
-            this.fixdisk.Size = new System.Drawing.Size(136, 39);
+            this.fixdisk.Size = new System.Drawing.Size(181, 49);
             this.fixdisk.TabIndex = 4;
             this.fixdisk.Text = "修复盘符";
             this.fixdisk.UseVisualStyleBackColor = true;
             // 
             // flashdevcfg
             // 
-            this.flashdevcfg.Location = new System.Drawing.Point(162, 84);
+            this.flashdevcfg.Location = new System.Drawing.Point(216, 105);
+            this.flashdevcfg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flashdevcfg.Name = "flashdevcfg";
-            this.flashdevcfg.Size = new System.Drawing.Size(136, 39);
+            this.flashdevcfg.Size = new System.Drawing.Size(181, 49);
             this.flashdevcfg.TabIndex = 3;
             this.flashdevcfg.Text = "刷入Devcfg";
             this.flashdevcfg.UseVisualStyleBackColor = true;
             // 
             // esppon
             // 
-            this.esppon.Location = new System.Drawing.Point(17, 84);
+            this.esppon.Location = new System.Drawing.Point(23, 105);
+            this.esppon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.esppon.Name = "esppon";
-            this.esppon.Size = new System.Drawing.Size(136, 39);
+            this.esppon.Size = new System.Drawing.Size(181, 49);
             this.esppon.TabIndex = 2;
             this.esppon.Text = "标记EFI分区";
             this.esppon.UseVisualStyleBackColor = true;
             // 
             // disdsv
             // 
-            this.disdsv.Location = new System.Drawing.Point(162, 26);
+            this.disdsv.Location = new System.Drawing.Point(216, 32);
+            this.disdsv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.disdsv.Name = "disdsv";
-            this.disdsv.Size = new System.Drawing.Size(139, 39);
+            this.disdsv.Size = new System.Drawing.Size(185, 49);
             this.disdsv.TabIndex = 1;
             this.disdsv.Text = "禁用驱动签名";
             this.disdsv.UseVisualStyleBackColor = true;
             // 
             // fixesp
             // 
-            this.fixesp.Location = new System.Drawing.Point(17, 26);
+            this.fixesp.Location = new System.Drawing.Point(23, 32);
+            this.fixesp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.fixesp.Name = "fixesp";
-            this.fixesp.Size = new System.Drawing.Size(136, 39);
+            this.fixesp.Size = new System.Drawing.Size(181, 49);
             this.fixesp.TabIndex = 0;
             this.fixesp.Text = "修复引导";
             this.fixesp.UseVisualStyleBackColor = true;
@@ -243,9 +261,10 @@
             // reinstall
             // 
             this.reinstall.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.reinstall.Location = new System.Drawing.Point(32, 357);
+            this.reinstall.Location = new System.Drawing.Point(43, 446);
+            this.reinstall.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reinstall.Name = "reinstall";
-            this.reinstall.Size = new System.Drawing.Size(147, 39);
+            this.reinstall.Size = new System.Drawing.Size(196, 49);
             this.reinstall.TabIndex = 15;
             this.reinstall.Text = "重装Windows";
             this.reinstall.UseVisualStyleBackColor = true;
@@ -253,9 +272,10 @@
             // openmindows
             // 
             this.openmindows.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.openmindows.Location = new System.Drawing.Point(32, 249);
+            this.openmindows.Location = new System.Drawing.Point(43, 311);
+            this.openmindows.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.openmindows.Name = "openmindows";
-            this.openmindows.Size = new System.Drawing.Size(147, 39);
+            this.openmindows.Size = new System.Drawing.Size(196, 49);
             this.openmindows.TabIndex = 14;
             this.openmindows.Text = "打开一键安装工具";
             this.openmindows.UseVisualStyleBackColor = true;
@@ -265,27 +285,31 @@
             this.groupBox12.Controls.Add(this.formatwin);
             this.groupBox12.Controls.Add(this.formatesp);
             this.groupBox12.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox12.Location = new System.Drawing.Point(518, 128);
+            this.groupBox12.Location = new System.Drawing.Point(691, 160);
+            this.groupBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(319, 77);
+            this.groupBox12.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox12.Size = new System.Drawing.Size(425, 96);
             this.groupBox12.TabIndex = 13;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "格式化";
             // 
             // formatwin
             // 
-            this.formatwin.Location = new System.Drawing.Point(162, 26);
+            this.formatwin.Location = new System.Drawing.Point(216, 32);
+            this.formatwin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.formatwin.Name = "formatwin";
-            this.formatwin.Size = new System.Drawing.Size(139, 34);
+            this.formatwin.Size = new System.Drawing.Size(185, 42);
             this.formatwin.TabIndex = 7;
             this.formatwin.Text = "格式化Windows";
             this.formatwin.UseVisualStyleBackColor = true;
             // 
             // formatesp
             // 
-            this.formatesp.Location = new System.Drawing.Point(17, 26);
+            this.formatesp.Location = new System.Drawing.Point(23, 32);
+            this.formatesp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.formatesp.Name = "formatesp";
-            this.formatesp.Size = new System.Drawing.Size(136, 34);
+            this.formatesp.Size = new System.Drawing.Size(181, 42);
             this.formatesp.TabIndex = 6;
             this.formatesp.Text = "格式化ESP";
             this.formatesp.UseVisualStyleBackColor = true;
@@ -297,45 +321,51 @@
             this.groupBox11.Controls.Add(this.rebootb);
             this.groupBox11.Controls.Add(this.reboot);
             this.groupBox11.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox11.Location = new System.Drawing.Point(213, 128);
+            this.groupBox11.Location = new System.Drawing.Point(284, 160);
+            this.groupBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(299, 115);
+            this.groupBox11.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox11.Size = new System.Drawing.Size(399, 144);
             this.groupBox11.TabIndex = 12;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "恢复";
             // 
             // repart
             // 
-            this.repart.Location = new System.Drawing.Point(151, 66);
+            this.repart.Location = new System.Drawing.Point(201, 82);
+            this.repart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.repart.Name = "repart";
-            this.repart.Size = new System.Drawing.Size(139, 34);
+            this.repart.Size = new System.Drawing.Size(185, 42);
             this.repart.TabIndex = 7;
             this.repart.Text = "恢复分区表";
             this.repart.UseVisualStyleBackColor = true;
             // 
             // reboota
             // 
-            this.reboota.Location = new System.Drawing.Point(6, 66);
+            this.reboota.Location = new System.Drawing.Point(8, 82);
+            this.reboota.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reboota.Name = "reboota";
-            this.reboota.Size = new System.Drawing.Size(136, 34);
+            this.reboota.Size = new System.Drawing.Size(181, 42);
             this.reboota.TabIndex = 6;
             this.reboota.Text = "恢复Boot到A";
             this.reboota.UseVisualStyleBackColor = true;
             // 
             // rebootb
             // 
-            this.rebootb.Location = new System.Drawing.Point(151, 26);
+            this.rebootb.Location = new System.Drawing.Point(201, 32);
+            this.rebootb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rebootb.Name = "rebootb";
-            this.rebootb.Size = new System.Drawing.Size(139, 34);
+            this.rebootb.Size = new System.Drawing.Size(185, 42);
             this.rebootb.TabIndex = 5;
             this.rebootb.Text = "恢复Boot到B";
             this.rebootb.UseVisualStyleBackColor = true;
             // 
             // reboot
             // 
-            this.reboot.Location = new System.Drawing.Point(6, 26);
+            this.reboot.Location = new System.Drawing.Point(8, 32);
+            this.reboot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.reboot.Name = "reboot";
-            this.reboot.Size = new System.Drawing.Size(136, 34);
+            this.reboot.Size = new System.Drawing.Size(181, 42);
             this.reboot.TabIndex = 4;
             this.reboot.Text = "恢复Boot";
             this.reboot.UseVisualStyleBackColor = true;
@@ -351,18 +381,21 @@
             this.groupBox10.Controls.Add(this.flashuefiboot);
             this.groupBox10.Controls.Add(this.choseuefi);
             this.groupBox10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox10.Location = new System.Drawing.Point(213, 6);
+            this.groupBox10.Location = new System.Drawing.Point(284, 8);
+            this.groupBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(624, 116);
+            this.groupBox10.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox10.Size = new System.Drawing.Size(832, 145);
             this.groupBox10.TabIndex = 11;
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "UEFI";
             // 
             // bootuefi
             // 
-            this.bootuefi.Location = new System.Drawing.Point(508, 27);
+            this.bootuefi.Location = new System.Drawing.Point(677, 34);
+            this.bootuefi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bootuefi.Name = "bootuefi";
-            this.bootuefi.Size = new System.Drawing.Size(83, 30);
+            this.bootuefi.Size = new System.Drawing.Size(111, 38);
             this.bootuefi.TabIndex = 6;
             this.bootuefi.Text = "临时启动";
             this.bootuefi.UseVisualStyleBackColor = true;
@@ -372,17 +405,19 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(301, 23);
+            this.label2.Location = new System.Drawing.Point(401, 29);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 34);
+            this.label2.Size = new System.Drawing.Size(190, 40);
             this.label2.TabIndex = 3;
             this.label2.Text = "如果未选择文件\n将直接刷入机型默认UEFI！";
             // 
             // flashuefiboota
             // 
-            this.flashuefiboota.Location = new System.Drawing.Point(154, 70);
+            this.flashuefiboota.Location = new System.Drawing.Point(205, 88);
+            this.flashuefiboota.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flashuefiboota.Name = "flashuefiboota";
-            this.flashuefiboota.Size = new System.Drawing.Size(136, 34);
+            this.flashuefiboota.Size = new System.Drawing.Size(181, 42);
             this.flashuefiboota.TabIndex = 3;
             this.flashuefiboota.Text = "刷入UEFI到Boota";
             this.flashuefiboota.UseVisualStyleBackColor = true;
@@ -390,9 +425,10 @@
             // 
             // flashuefibootb
             // 
-            this.flashuefibootb.Location = new System.Drawing.Point(305, 70);
+            this.flashuefibootb.Location = new System.Drawing.Point(407, 88);
+            this.flashuefibootb.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flashuefibootb.Name = "flashuefibootb";
-            this.flashuefibootb.Size = new System.Drawing.Size(139, 34);
+            this.flashuefibootb.Size = new System.Drawing.Size(185, 42);
             this.flashuefibootb.TabIndex = 2;
             this.flashuefibootb.Text = "刷入UEFI到Bootb";
             this.flashuefibootb.UseVisualStyleBackColor = true;
@@ -400,16 +436,18 @@
             // 
             // uefifilename
             // 
-            this.uefifilename.Location = new System.Drawing.Point(103, 29);
+            this.uefifilename.Location = new System.Drawing.Point(137, 36);
+            this.uefifilename.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.uefifilename.Name = "uefifilename";
-            this.uefifilename.Size = new System.Drawing.Size(187, 23);
+            this.uefifilename.Size = new System.Drawing.Size(248, 27);
             this.uefifilename.TabIndex = 5;
             // 
             // flashuefirec
             // 
-            this.flashuefirec.Location = new System.Drawing.Point(456, 70);
+            this.flashuefirec.Location = new System.Drawing.Point(608, 88);
+            this.flashuefirec.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flashuefirec.Name = "flashuefirec";
-            this.flashuefirec.Size = new System.Drawing.Size(162, 34);
+            this.flashuefirec.Size = new System.Drawing.Size(216, 42);
             this.flashuefirec.TabIndex = 1;
             this.flashuefirec.Text = "刷入UEFI到Recovery";
             this.flashuefirec.UseVisualStyleBackColor = true;
@@ -417,9 +455,10 @@
             // 
             // flashuefiboot
             // 
-            this.flashuefiboot.Location = new System.Drawing.Point(6, 70);
+            this.flashuefiboot.Location = new System.Drawing.Point(8, 88);
+            this.flashuefiboot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.flashuefiboot.Name = "flashuefiboot";
-            this.flashuefiboot.Size = new System.Drawing.Size(136, 34);
+            this.flashuefiboot.Size = new System.Drawing.Size(181, 42);
             this.flashuefiboot.TabIndex = 0;
             this.flashuefiboot.Text = "刷入UEFI到Boot";
             this.flashuefiboot.UseVisualStyleBackColor = true;
@@ -427,9 +466,10 @@
             // 
             // choseuefi
             // 
-            this.choseuefi.Location = new System.Drawing.Point(6, 26);
+            this.choseuefi.Location = new System.Drawing.Point(8, 32);
+            this.choseuefi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.choseuefi.Name = "choseuefi";
-            this.choseuefi.Size = new System.Drawing.Size(81, 30);
+            this.choseuefi.Size = new System.Drawing.Size(108, 38);
             this.choseuefi.TabIndex = 4;
             this.choseuefi.Text = "选择文件";
             this.choseuefi.UseVisualStyleBackColor = true;
@@ -449,9 +489,11 @@
             this.groupBox9.Controls.Add(this.mix2s);
             this.groupBox9.Controls.Add(this.download);
             this.groupBox9.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox9.Location = new System.Drawing.Point(7, 6);
+            this.groupBox9.Location = new System.Drawing.Point(9, 8);
+            this.groupBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(200, 237);
+            this.groupBox9.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox9.Size = new System.Drawing.Size(267, 296);
             this.groupBox9.TabIndex = 10;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "选择机型";
@@ -459,9 +501,10 @@
             // op5t
             // 
             this.op5t.AutoSize = true;
-            this.op5t.Location = new System.Drawing.Point(96, 152);
+            this.op5t.Location = new System.Drawing.Point(128, 190);
+            this.op5t.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.op5t.Name = "op5t";
-            this.op5t.Size = new System.Drawing.Size(64, 21);
+            this.op5t.Size = new System.Drawing.Size(78, 24);
             this.op5t.TabIndex = 11;
             this.op5t.TabStop = true;
             this.op5t.Text = "一加5T";
@@ -470,9 +513,10 @@
             // op5
             // 
             this.op5.AutoSize = true;
-            this.op5.Location = new System.Drawing.Point(96, 131);
+            this.op5.Location = new System.Drawing.Point(128, 164);
+            this.op5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.op5.Name = "op5";
-            this.op5.Size = new System.Drawing.Size(57, 21);
+            this.op5.Size = new System.Drawing.Size(69, 24);
             this.op5.TabIndex = 10;
             this.op5.TabStop = true;
             this.op5.Text = "一加5";
@@ -481,9 +525,10 @@
             // op6t
             // 
             this.op6t.AutoSize = true;
-            this.op6t.Location = new System.Drawing.Point(6, 152);
+            this.op6t.Location = new System.Drawing.Point(8, 190);
+            this.op6t.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.op6t.Name = "op6t";
-            this.op6t.Size = new System.Drawing.Size(64, 21);
+            this.op6t.Size = new System.Drawing.Size(78, 24);
             this.op6t.TabIndex = 9;
             this.op6t.TabStop = true;
             this.op6t.Text = "一加6T";
@@ -492,9 +537,10 @@
             // op6
             // 
             this.op6.AutoSize = true;
-            this.op6.Location = new System.Drawing.Point(6, 131);
+            this.op6.Location = new System.Drawing.Point(8, 164);
+            this.op6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.op6.Name = "op6";
-            this.op6.Size = new System.Drawing.Size(57, 21);
+            this.op6.Size = new System.Drawing.Size(69, 24);
             this.op6.TabIndex = 8;
             this.op6.TabStop = true;
             this.op6.Text = "一加6";
@@ -503,9 +549,10 @@
             // mix2
             // 
             this.mix2.AutoSize = true;
-            this.mix2.Location = new System.Drawing.Point(96, 110);
+            this.mix2.Location = new System.Drawing.Point(128, 138);
+            this.mix2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mix2.Name = "mix2";
-            this.mix2.Size = new System.Drawing.Size(81, 21);
+            this.mix2.Size = new System.Drawing.Size(98, 24);
             this.mix2.TabIndex = 7;
             this.mix2.TabStop = true;
             this.mix2.Text = "小米MIX2";
@@ -514,9 +561,10 @@
             // mi6
             // 
             this.mi6.AutoSize = true;
-            this.mi6.Location = new System.Drawing.Point(6, 110);
+            this.mi6.Location = new System.Drawing.Point(8, 138);
+            this.mi6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mi6.Name = "mi6";
-            this.mi6.Size = new System.Drawing.Size(57, 21);
+            this.mi6.Size = new System.Drawing.Size(69, 24);
             this.mi6.TabIndex = 6;
             this.mi6.TabStop = true;
             this.mi6.Text = "小米6";
@@ -525,9 +573,10 @@
             // mix3
             // 
             this.mix3.AutoSize = true;
-            this.mix3.Location = new System.Drawing.Point(6, 85);
+            this.mix3.Location = new System.Drawing.Point(8, 106);
+            this.mix3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mix3.Name = "mix3";
-            this.mix3.Size = new System.Drawing.Size(81, 21);
+            this.mix3.Size = new System.Drawing.Size(98, 24);
             this.mix3.TabIndex = 5;
             this.mix3.TabStop = true;
             this.mix3.Text = "小米MIX3";
@@ -536,9 +585,10 @@
             // mi8ud
             // 
             this.mi8ud.AutoSize = true;
-            this.mi8ud.Location = new System.Drawing.Point(6, 61);
+            this.mi8ud.Location = new System.Drawing.Point(8, 76);
+            this.mi8ud.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mi8ud.Name = "mi8ud";
-            this.mi8ud.Size = new System.Drawing.Size(123, 21);
+            this.mi8ud.Size = new System.Drawing.Size(151, 24);
             this.mi8ud.TabIndex = 4;
             this.mi8ud.TabStop = true;
             this.mi8ud.Text = "小米8UD和探索版";
@@ -547,9 +597,10 @@
             // mi8
             // 
             this.mi8.AutoSize = true;
-            this.mi8.Location = new System.Drawing.Point(6, 39);
+            this.mi8.Location = new System.Drawing.Point(8, 49);
+            this.mi8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mi8.Name = "mi8";
-            this.mi8.Size = new System.Drawing.Size(57, 21);
+            this.mi8.Size = new System.Drawing.Size(69, 24);
             this.mi8.TabIndex = 3;
             this.mi8.TabStop = true;
             this.mi8.Text = "小米8";
@@ -558,9 +609,10 @@
             // mix2s
             // 
             this.mix2s.AutoSize = true;
-            this.mix2s.Location = new System.Drawing.Point(6, 17);
+            this.mix2s.Location = new System.Drawing.Point(8, 21);
+            this.mix2s.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mix2s.Name = "mix2s";
-            this.mix2s.Size = new System.Drawing.Size(88, 21);
+            this.mix2s.Size = new System.Drawing.Size(107, 24);
             this.mix2s.TabIndex = 2;
             this.mix2s.TabStop = true;
             this.mix2s.Text = "小米MIX2S";
@@ -568,9 +620,10 @@
             // 
             // download
             // 
-            this.download.Location = new System.Drawing.Point(44, 188);
+            this.download.Location = new System.Drawing.Point(59, 235);
+            this.download.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.download.Name = "download";
-            this.download.Size = new System.Drawing.Size(95, 42);
+            this.download.Size = new System.Drawing.Size(127, 52);
             this.download.TabIndex = 1;
             this.download.Text = "下载资源";
             this.download.UseVisualStyleBackColor = true;
@@ -584,18 +637,21 @@
             this.groupBox2.Controls.Add(this.conninfo);
             this.groupBox2.Controls.Add(this.deviceconn);
             this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox2.Location = new System.Drawing.Point(7, 402);
+            this.groupBox2.Location = new System.Drawing.Point(9, 502);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(830, 68);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Size = new System.Drawing.Size(1107, 85);
             this.groupBox2.TabIndex = 19;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "设备信息";
             // 
             // checkconn
             // 
-            this.checkconn.Location = new System.Drawing.Point(718, 22);
+            this.checkconn.Location = new System.Drawing.Point(957, 28);
+            this.checkconn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.checkconn.Name = "checkconn";
-            this.checkconn.Size = new System.Drawing.Size(79, 29);
+            this.checkconn.Size = new System.Drawing.Size(105, 36);
             this.checkconn.TabIndex = 4;
             this.checkconn.Text = "检查连接";
             this.checkconn.UseVisualStyleBackColor = true;
@@ -604,44 +660,48 @@
             // BLinfo
             // 
             this.BLinfo.AutoSize = true;
-            this.BLinfo.Location = new System.Drawing.Point(446, 28);
+            this.BLinfo.Location = new System.Drawing.Point(595, 35);
+            this.BLinfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BLinfo.Name = "BLinfo";
-            this.BLinfo.Size = new System.Drawing.Size(32, 17);
+            this.BLinfo.Size = new System.Drawing.Size(39, 20);
             this.BLinfo.TabIndex = 3;
             this.BLinfo.Text = "未知";
             // 
             // BL
             // 
             this.BL.AutoSize = true;
-            this.BL.Location = new System.Drawing.Point(357, 28);
+            this.BL.Location = new System.Drawing.Point(476, 35);
+            this.BL.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.BL.Name = "BL";
-            this.BL.Size = new System.Drawing.Size(70, 17);
+            this.BL.Size = new System.Drawing.Size(86, 20);
             this.BL.TabIndex = 2;
             this.BL.Text = "BL锁状态：";
             // 
             // conninfo
             // 
             this.conninfo.AutoSize = true;
-            this.conninfo.Location = new System.Drawing.Point(119, 28);
+            this.conninfo.Location = new System.Drawing.Point(159, 35);
+            this.conninfo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.conninfo.Name = "conninfo";
-            this.conninfo.Size = new System.Drawing.Size(32, 17);
+            this.conninfo.Size = new System.Drawing.Size(39, 20);
             this.conninfo.TabIndex = 1;
             this.conninfo.Text = "未知";
             // 
             // deviceconn
             // 
             this.deviceconn.AutoSize = true;
-            this.deviceconn.Location = new System.Drawing.Point(31, 28);
+            this.deviceconn.Location = new System.Drawing.Point(41, 35);
+            this.deviceconn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.deviceconn.Name = "deviceconn";
-            this.deviceconn.Size = new System.Drawing.Size(68, 17);
+            this.deviceconn.Size = new System.Drawing.Size(84, 20);
             this.deviceconn.TabIndex = 0;
             this.deviceconn.Text = "设备状态：";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(845, 474);
+            this.ClientSize = new System.Drawing.Size(1127, 592);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.mass);
             this.Controls.Add(this.groupBox14);
@@ -653,7 +713,7 @@
             this.Controls.Add(this.groupBox10);
             this.Controls.Add(this.groupBox9);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "Form1";
             this.Text = "Mindows工具箱";
             this.Load += new System.EventHandler(this.Form1_Load);

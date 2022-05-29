@@ -105,6 +105,7 @@ namespace Mindows
         private void choseuefi_Click(object sender, EventArgs e)
         {
             OpenFileDialog fileDialog = new OpenFileDialog();
+            fileDialog.Filter = "UEFI Files(*.img) | *.img";
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 uefifilename.Text = fileDialog.FileName;
@@ -294,6 +295,11 @@ namespace Mindows
             {
                 MessageBox.Show("设备未连接", "提示");
             }
+        }
+
+        private void mindows_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://mindows.cn");
         }
     }
 }
