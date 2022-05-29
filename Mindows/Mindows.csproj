@@ -50,6 +50,116 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ADBHelper.cs" />
+    <Compile Include="BasicAPI\BasicBooter.cs" />
+    <Compile Include="BasicAPI\Calling\CommandExecutorExtension.cs" />
+    <Compile Include="BasicAPI\Calling\CommandResultExtension.cs" />
+    <Compile Include="BasicAPI\Calling\CPMExtension.cs" />
+    <Compile Include="BasicAPI\Calling\Events.cs" />
+    <Compile Include="BasicAPI\Calling\HestExecutor.cs" />
+    <Compile Include="BasicAPI\Calling\ICommandExecutor.cs" />
+    <Compile Include="BasicAPI\Data\CommandResult.cs" />
+    <Compile Include="BasicAPI\Data\INotifyDisposed.cs" />
+    <Compile Include="BasicAPI\Data\INotifyOutput.cs" />
+    <Compile Include="BasicAPI\Data\Output.cs" />
+    <Compile Include="BasicAPI\Data\OutputBuilder.cs" />
+    <Compile Include="BasicAPI\Data\OutputReceivedEvent.cs" />
+    <Compile Include="BasicAPI\Data\Size.cs" />
+    <Compile Include="BasicAPI\Device\DeviceBase.cs" />
+    <Compile Include="BasicAPI\Device\DeviceCommander.cs" />
+    <Compile Include="BasicAPI\Device\DeviceExtension.Execute.cs" />
+    <Compile Include="BasicAPI\Device\DeviceExtension.Management.cs" />
+    <Compile Include="BasicAPI\Device\DeviceExtension.Reboot.cs" />
+    <Compile Include="BasicAPI\Device\DeviceState.cs" />
+    <Compile Include="BasicAPI\Device\Emulator.cs" />
+    <Compile Include="BasicAPI\Device\FastbootFixedExecutor.cs" />
+    <Compile Include="BasicAPI\Device\IDevice.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\AppFx\ActivityManager.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\AppFx\ComponentName.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\AppFx\Intent.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\AppFx\IntentStringHelper.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\AppFx\PackageInstaller.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\AppFx\TrimMemoryLevel.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\AndroidKeyCode.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\AndroidShell.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\BatteryInfo.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\BatteryManager.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\BuildKeys.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\BuildReder.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\CachedBuildReader.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\Cat.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\HardwareInfo.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\HardwareInfoGetter.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\KeyInputer.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\MemInfoGetter.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\MemoryInfo.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\ScreenCap.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\ScreenCapture.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\StatGetter.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\Uptime.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\UserInfo.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\UserManager.cs" />
+    <Compile Include="BasicAPI\Device\ManagementV2\OS\WindowManager.cs" />
+    <Compile Include="BasicAPI\Device\Management\AppFx\BroadcastSender.cs" />
+    <Compile Include="BasicAPI\Device\Management\AppFx\ComponentName.cs" />
+    <Compile Include="BasicAPI\Device\Management\AppFx\DevicePolicyManager.cs" />
+    <Compile Include="BasicAPI\Device\Management\AppFx\InstallTarget.cs" />
+    <Compile Include="BasicAPI\Device\Management\AppFx\Intent.cs" />
+    <Compile Include="BasicAPI\Device\Management\AppFx\IntentStringHelper.cs" />
+    <Compile Include="BasicAPI\Device\Management\AppFx\PackageInfo.cs" />
+    <Compile Include="BasicAPI\Device\Management\AppFx\PackageManager.cs" />
+    <Compile Include="BasicAPI\Device\Management\AppFx\PackageManagerInstallOption.cs" />
+    <Compile Include="BasicAPI\Device\Management\AppFx\ServiceManager.cs" />
+    <Compile Include="BasicAPI\Device\Management\AppFx\TrimMemoryLevel.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\AndroidKeyCode.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\BuildPropKeys.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\DeviceBuildPropGetter.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\DeviceBuildPropManager.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\DeviceBuildPropSetter.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\FileSystem.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\Inputer.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\ShellCommandHelper.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\UserInfo.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\UserManager.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\VideoRecorder.cs" />
+    <Compile Include="BasicAPI\Device\Management\OS\WindowManager.cs" />
+    <Compile Include="BasicAPI\Device\NetDevice.cs" />
+    <Compile Include="BasicAPI\Device\UsbDevice.cs" />
+    <Compile Include="BasicAPI\Exceptions\AdbCommandFailedException.cs" />
+    <Compile Include="BasicAPI\Exceptions\AdbShellCommandFailedException.cs" />
+    <Compile Include="BasicAPI\Exceptions\CommandCancelledException.cs" />
+    <Compile Include="BasicAPI\Exceptions\CommandErrorException.cs" />
+    <Compile Include="BasicAPI\Exceptions\CommandFaultException.cs" />
+    <Compile Include="BasicAPI\Exceptions\CommandNotFoundException.cs" />
+    <Compile Include="BasicAPI\Exceptions\DeviceHasNoSuException.cs" />
+    <Compile Include="BasicAPI\Exceptions\DeviceNotAliveException.cs" />
+    <Compile Include="BasicAPI\Exceptions\DeviceNotFoundException.cs" />
+    <Compile Include="BasicAPI\Exceptions\PackageNotFoundException.cs" />
+    <Compile Include="BasicAPI\ManagedAdb\CommandDriven\CommandDrivenHelper.cs" />
+    <Compile Include="BasicAPI\ManagedAdb\CommandDriven\CommandProcedure.cs" />
+    <Compile Include="BasicAPI\ManagedAdb\CommandDriven\CommandStatus.cs" />
+    <Compile Include="BasicAPI\ManagedAdb\CommandDriven\IAdbManager.cs" />
+    <Compile Include="BasicAPI\ManagedAdb\CommandDriven\ICommandProcedure.cs" />
+    <Compile Include="BasicAPI\ManagedAdb\CommandDriven\ICommandProcedureManager.cs" />
+    <Compile Include="BasicAPI\ManagedAdb\CommandDriven\ProcedureManager.cs" />
+    <Compile Include="BasicAPI\ManagedAdb\CommandDriven\StandardAdbManager.cs" />
+    <Compile Include="BasicAPI\ManagedAdb\CommandDriven\Unix\UnixCPM.cs" />
+    <Compile Include="BasicAPI\ManagedAdb\SocketDriven\Future.cs" />
+    <Compile Include="BasicAPI\ModuleInfo.cs" />
+    <Compile Include="BasicAPI\MultipleDevices\DevicesArrayExtension.cs" />
+    <Compile Include="BasicAPI\MultipleDevices\DevicesChangedEvent.cs" />
+    <Compile Include="BasicAPI\MultipleDevices\DevicesCollection.cs" />
+    <Compile Include="BasicAPI\MultipleDevices\DevicesGetter.cs" />
+    <Compile Include="BasicAPI\MultipleDevices\DevicesMonitor.cs" />
+    <Compile Include="BasicAPI\MultipleDevices\IDevicesGetter.cs" />
+    <Compile Include="BasicAPI\Util\AdbServerKiller.cs" />
+    <Compile Include="BasicAPI\Util\CommandResultExtension.cs" />
+    <Compile Include="BasicAPI\Util\LinuxReturnCode.cs" />
+    <Compile Include="BasicAPI\Util\LocalAdbServerKiller.cs" />
+    <Compile Include="BasicAPI\Util\NativeMethods.cs" />
+    <Compile Include="BasicAPI\Util\ProcessExtension.cs" />
+    <Compile Include="BasicAPI\Util\ProcessKiller.cs" />
+    <Compile Include="BasicAPI\Util\Settings.cs" />
+    <Compile Include="BasicAPI\Util\ThrowIf.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,11 +196,6 @@
   <ItemGroup>
     <Content Include="Mindows.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DeviceState\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -5,8 +5,6 @@ VisualStudioVersion = 17.1.32407.343
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mindows", "Mindows\Mindows.csproj", "{A239C4D4-7BB1-45DA-89A1-FB34F851352C}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BasicApi", "BasicAPI\BasicApi.shproj", "{A84D8834-6B6D-42ED-95BE-D874BD76BEE2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,8 +21,5 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {42AB8A95-BF12-482F-BBA1-E2ACD3B2A6E3}
-	EndGlobalSection
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		BasicAPI\BasicApi.projitems*{a84d8834-6b6d-42ed-95be-d874bd76bee2}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal
