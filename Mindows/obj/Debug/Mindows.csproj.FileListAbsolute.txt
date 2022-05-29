@@ -1,0 +1,11 @@
+C:\Users\mjw\source\repos\Mindows\Mindows\bin\Debug\Mindows.exe.config
+C:\Users\mjw\source\repos\Mindows\Mindows\bin\Debug\Mindows.exe
+C:\Users\mjw\source\repos\Mindows\Mindows\bin\Debug\Mindows.pdb
+C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.csproj.AssemblyReference.cache
+C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.csproj.SuggestedBindingRedirects.cache
+C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.Form1.resources
+C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.Properties.Resources.resources
+C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.csproj.GenerateResource.cache
+C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.csproj.CoreCompileInputs.cache
+C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.exe
+C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.pdb
