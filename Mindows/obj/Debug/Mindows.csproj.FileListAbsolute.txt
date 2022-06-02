@@ -9,14 +9,9 @@ C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.csproj.GenerateResou
 C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.csproj.CoreCompileInputs.cache
 C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.exe
 C:\Users\mjw\source\repos\Mindows\Mindows\obj\Debug\Mindows.pdb
-D:\Source Code\Mindows\Mindows\Mindows\bin\Debug\Mindows.exe.config
-D:\Source Code\Mindows\Mindows\Mindows\bin\Debug\Mindows.exe
-D:\Source Code\Mindows\Mindows\Mindows\bin\Debug\Mindows.pdb
 D:\Source Code\Mindows\Mindows\Mindows\obj\Debug\Mindows.csproj.AssemblyReference.cache
 D:\Source Code\Mindows\Mindows\Mindows\obj\Debug\Mindows.csproj.SuggestedBindingRedirects.cache
 D:\Source Code\Mindows\Mindows\Mindows\obj\Debug\Mindows.Form1.resources
 D:\Source Code\Mindows\Mindows\Mindows\obj\Debug\Mindows.Properties.Resources.resources
 D:\Source Code\Mindows\Mindows\Mindows\obj\Debug\Mindows.csproj.GenerateResource.cache
 D:\Source Code\Mindows\Mindows\Mindows\obj\Debug\Mindows.csproj.CoreCompileInputs.cache
-D:\Source Code\Mindows\Mindows\Mindows\obj\Debug\Mindows.exe
-D:\Source Code\Mindows\Mindows\Mindows\obj\Debug\Mindows.pdb

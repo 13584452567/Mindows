@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Mindows.Basic.Calling;
+using Mindows.Basic.Data;
 
 namespace Mindows
 {
     internal class ADBHelper
     {
-        public static string ADB(string adb)
+
+
+        public static ICommandResult ADB(string adb)
         {
             string cmd = @"bin\adb.exe";
             ProcessStartInfo adbshell = null;
@@ -23,7 +22,7 @@ namespace Mindows
             string output = reader.ReadToEnd();
             return output;
         }
-        public static string AError(string adb)
+        public static ICommandResult AError(string adb)
         {
             string cmd = @"bin\adb.exe";
             ProcessStartInfo adbshell = null;
@@ -37,7 +36,7 @@ namespace Mindows
             return output;
         }
 
-        public static string Fastboot(string fb)
+        public static ICommandResult Fastboot(string fb)
         {
             string cmd = @"bin\fastboot.exe";
             ProcessStartInfo fastboot = null;
@@ -50,7 +49,7 @@ namespace Mindows
             string output = reader.ReadToEnd();
             return output;
         }
-        public static string FError(string fb)
+        public static ICommandResult FError(string fb)
         {
             string cmd = @"bin\fastboot.exe";
             ProcessStartInfo fastboot = null;
@@ -63,5 +62,11 @@ namespace Mindows
             string output = reader.ReadToEnd();
             return output;
         }
+        public static ICommandResult AdbShell(string args)
+        {
+            string joined = string.Join(" ", args);
+            return ADB($"shell {joined}");
+        }
+
     }
 }
