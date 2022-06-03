@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using Mindows.Basic;
+using Mindows.Basic.Calling;
+using Mindows.Basic.Device;
 
 namespace Mindows
 {
@@ -13,63 +15,110 @@ namespace Mindows
 
         private void checkconn_Click(object sender, EventArgs e)
         {
-            if (ADBHelper.Fastboot("devices") != "")
-            {
-                conninfo.Text = "Fastboot";
-            }
-            else
-            {
-                conninfo.Text = "未连接";
-            }
-            int adbcheck = ADBHelper.ADB("devices").IndexOf("recovery");
-            if (adbcheck != -1)
-            {
-                conninfo.Text = "Recovery";
-            }
-            if (conninfo.Text == "Fastboot")
-            {
-                int unlocked = ADBHelper.FError("getvar unlocked").IndexOf("yes");
-                if (unlocked != -1)
+            void EntryPoint(IDevice device)
+            { 
+                if (device.State == DeviceState.Poweron)
                 {
-                    BLinfo.Text = "已解锁";
+                    conninfo.Text = "已连接";
                 }
-                int locked = ADBHelper.FError("getvar unlocked").IndexOf("no");
-                if (locked != -1)
+                if (device.State == DeviceState.Recovery)
                 {
-                    BLinfo.Text = "未解锁";
+                    conninfo.Text = "Recovery";
                 }
+                if (device.State == DeviceState.Sideload)
+                {
+                    conninfo.Text = "Sideload";
+
+                }
+                if (device.State == DeviceState.Offline)
+                {
+                    conninfo.Text = "设备离线";
+                }
+                if (device.State == DeviceState.Unauthorized)
+                {
+                    conninfo.Text = "设备未授权";
+                }
+                if (device.State == DeviceState.Unknown)
+                {
+                    conninfo.Text = "未知状态";
+                }
+                if (device.State == DeviceState.Fastboot)
+                {
+                    conninfo.Text = "Fastboot";
+                    CommandExecutor executer = new CommandExecutor();
+                    var result = executer.Fastboot(device, $"getvar unlocked");
+                    if (result.ExitCode == 0)
+                    {
+                        if (result.Output.Contains("yes"))
+                        {
+                            BLinfo.Text = "已解锁";
+                        }
+                        else
+                        {
+                            BLinfo.Text = "未解锁";
+                        }
+                    }
+                    else
+                    {
+                        BLinfo.Text = "读取失败";
+                    }
+                } 
             }
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            if (ADBHelper.Fastboot("devices") != "")
+            void EntryPoint(IDevice device)
             {
-                conninfo.Text = "Fastboot";
-            }
-            else
-            {
-                conninfo.Text = "未连接";
-            }
-            int adbcheck = ADBHelper.ADB("devices").IndexOf("recovery");
-            if (adbcheck != -1)
-            {
-                conninfo.Text = "Recovery";
-            }
-            if (conninfo.Text == "Fastboot")
-            {
-                int unlocked = ADBHelper.FError("getvar unlocked").IndexOf("yes");
-                if (unlocked != -1)
+                if (device.State == DeviceState.Poweron)
                 {
-                    BLinfo.Text = "已解锁";
+                    conninfo.Text = "已连接";
                 }
-                int locked = ADBHelper.FError("getvar unlocked").IndexOf("no");
-                if (locked != -1)
+                if (device.State == DeviceState.Recovery)
                 {
-                    BLinfo.Text = "未解锁";
+                    conninfo.Text = "Recovery";
+                }
+                if (device.State == DeviceState.Sideload)
+                {
+                    conninfo.Text = "Sideload";
+
+                }
+                if (device.State == DeviceState.Offline)
+                {
+                    conninfo.Text = "设备离线";
+                }
+                if (device.State == DeviceState.Unauthorized)
+                {
+                    conninfo.Text = "设备未授权";
+                }
+                if (device.State == DeviceState.Unknown)
+                {
+                    conninfo.Text = "未知状态";
+                }
+                if (device.State == DeviceState.Fastboot)
+                {
+                    conninfo.Text = "Fastboot";
+                    CommandExecutor executer = new CommandExecutor();
+                    var result = executer.Fastboot(device, $"getvar unlocked");
+                    if (result.ExitCode == 0)
+                    {
+                        if (result.Output.Contains("yes"))
+                        {
+                            BLinfo.Text = "已解锁";
+                        }
+                        else
+                        {
+                            BLinfo.Text = "未解锁";
+                        }
+                    }
+                    else
+                    {
+                        BLinfo.Text = "读取失败";
+                    }
                 }
             }
         }
+        
 
         string device = "";
         private void download_Click(object sender, EventArgs e)
@@ -108,186 +157,208 @@ namespace Mindows
 
         private void flashuefiboot_Click(object sender, EventArgs e)
         {
-            if (ADBHelper.Fastboot("devices") != "")
+            void EntryPoint(IDevice device)
             {
-                conninfo.Text = "Fastboot";
-            }
-            else
-            {
-                conninfo.Text = "未连接";
-            }
-            if (conninfo.Text == "Fastboot")
-            {
-                if (uefifilename.Text != "")
+
+
+                if (device.State == DeviceState.Fastboot)
                 {
-                    string file = uefifilename.Text;
-                    string shell = string.Format("flash boot {0}", file);
-                    int sf = ADBHelper.FError(shell).IndexOf("FAILED");
-                    if (sf == -1)
+                    conninfo.Text = "Fastboot";
+                }
+                else
+                {
+                    conninfo.Text = "未连接";
+                }
+                if (conninfo.Text == "Fastboot")
+                {
+                    if (uefifilename.Text != "")
                     {
-                        MessageBox.Show("刷入成功！", "提示");
+                        string file = uefifilename.Text;
+                        CommandExecutor executer = new CommandExecutor();
+                        string shell = string.Format("flash boot {0}", file);
+                        var result = executer.Fastboot(shell);
+                        if (result.ExitCode == 0)
+                        {
+                            MessageBox.Show("刷入成功！", "提示");
+                        }
+                        else
+                        {
+                            MessageBox.Show("刷入失败！", "提示");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("刷入失败！", "提示");
+                        MessageBox.Show("请选择UEFI文件！", "提示");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("请选择UEFI文件！", "提示");
+                    MessageBox.Show("无Fastboot设备链接", "提示");
                 }
-            }
-            else
-            {
-                MessageBox.Show("设备未连接", "提示");
             }
         }
 
         private void flashuefiboota_Click(object sender, EventArgs e)
         {
-            if (ADBHelper.Fastboot("devices") != "")
+            void EntryPoint(IDevice device)
             {
-                conninfo.Text = "Fastboot";
-            }
-            else
-            {
-                conninfo.Text = "未连接";
-            }
-            if (conninfo.Text == "Fastboot")
-            {
-                if (uefifilename.Text != "")
+                if (device.State == DeviceState.Fastboot)
                 {
-                    string file = uefifilename.Text;
-                    string shell = string.Format("flash boot_a {0}", file);
-                    int sf = ADBHelper.FError(shell).IndexOf("FAILED");
-                    if (sf == -1)
+                    conninfo.Text = "Fastboot";
+                }
+                else
+                {
+                    conninfo.Text = "未连接";
+                }
+                if (conninfo.Text == "Fastboot")
+                {
+                    if (uefifilename.Text != "")
                     {
-                        MessageBox.Show("刷入成功！", "提示");
+                        string file = uefifilename.Text;
+                        CommandExecutor executer = new CommandExecutor();
+                        string shell = string.Format("flash boot_a {0}", file);
+                        var result = executer.Fastboot(shell);
+                        if (result.ExitCode == 0)
+                        {
+                            MessageBox.Show("刷入成功！", "提示");
+                        }
+                        else
+                        {
+                            MessageBox.Show("刷入失败！", "提示");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("刷入失败！", "提示");
+                        MessageBox.Show("请选择UEFI文件！", "提示");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("请选择UEFI文件！", "提示");
+                    MessageBox.Show("无Fastboot设备链接", "提示");
                 }
-            }
-            else
-            {
-                MessageBox.Show("设备未连接", "提示");
             }
         }
 
         private void flashuefibootb_Click(object sender, EventArgs e)
         {
-            if (ADBHelper.Fastboot("devices") != "")
+            void EntryPoint(IDevice device)
             {
-                conninfo.Text = "Fastboot";
-            }
-            else
-            {
-                conninfo.Text = "未连接";
-            }
-            if (conninfo.Text == "Fastboot")
-            {
-                if (uefifilename.Text != "")
+                if (device.State == DeviceState.Fastboot)
                 {
-                    string file = uefifilename.Text;
-                    string shell = string.Format("flash boot_b {0}", file);
-                    int sf = ADBHelper.FError(shell).IndexOf("FAILED");
-                    if (sf == -1)
+                    conninfo.Text = "Fastboot";
+                }
+                else
+                {
+                    conninfo.Text = "未连接";
+                }
+                if (conninfo.Text == "Fastboot")
+                {
+                    if (uefifilename.Text != "")
                     {
-                        MessageBox.Show("刷入成功！", "提示");
+                        string file = uefifilename.Text;
+                        CommandExecutor executer = new CommandExecutor();
+                        string shell = string.Format("flash boot_b {0}", file);
+                        var result = executer.Fastboot(shell);
+                        if (result.ExitCode == 0)
+                        {
+                            MessageBox.Show("刷入成功！", "提示");
+                        }
+                        else
+                        {
+                            MessageBox.Show("刷入失败！", "提示");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("刷入失败！", "提示");
+                        MessageBox.Show("请选择UEFI文件！", "提示");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("请选择UEFI文件！", "提示");
+                    MessageBox.Show("无Fastboot设备链接", "提示");
                 }
-            }
-            else
-            {
-                MessageBox.Show("设备未连接", "提示");
             }
         }
 
         private void flashuefirec_Click(object sender, EventArgs e)
         {
-            if (ADBHelper.Fastboot("devices") != "")
+            void EntryPoint(IDevice device)
             {
-                conninfo.Text = "Fastboot";
-            }
-            else
-            {
-                conninfo.Text = "未连接";
-            }
-            if (conninfo.Text == "Fastboot")
-            {
-                if (uefifilename.Text != "")
+                if (device.State == DeviceState.Fastboot)
                 {
-                    string file = uefifilename.Text;
-                    string shell = string.Format("flash recovery {0}", file);
-                    int sf = ADBHelper.FError(shell).IndexOf("FAILED");
-                    if (sf == -1)
+                    conninfo.Text = "Fastboot";
+                }
+                else
+                {
+                    conninfo.Text = "未连接";
+                }
+                if (conninfo.Text == "Fastboot")
+                {
+                    if (uefifilename.Text != "")
                     {
-                        MessageBox.Show("刷入成功！", "提示");
+                        string file = uefifilename.Text;
+                        string shell = string.Format("flash recovery {0}", file);
+                        CommandExecutor executer = new CommandExecutor();
+                        var result = executer.Fastboot(shell);
+                        if (result.ExitCode == 0)
+                        {
+                            MessageBox.Show("刷入成功！", "提示");
+                        }
+                        else
+                        {
+                            MessageBox.Show("刷入失败！", "提示");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("刷入失败！", "提示");
+                        MessageBox.Show("请选择UEFI文件！", "提示");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("请选择UEFI文件！", "提示");
+                    MessageBox.Show("设备未连接", "提示");
                 }
-            }
-            else
-            {
-                MessageBox.Show("设备未连接", "提示");
             }
         }
 
         private void bootuefi_Click(object sender, EventArgs e)
         {
-            if (ADBHelper.Fastboot("devices") != "")
+            void EntryPoint(IDevice device)
             {
-                conninfo.Text = "Fastboot";
-            }
-            else
-            {
-                conninfo.Text = "未连接";
-            }
-            if (conninfo.Text == "Fastboot")
-            {
-                if (uefifilename.Text != "")
+                if (device.State == DeviceState.Fastboot)
                 {
-                    string file = uefifilename.Text;
-                    string shell = string.Format("boot {0}", file);
-                    int sf = ADBHelper.FError(shell).IndexOf("FAILED");
-                    if (sf == -1)
+                    conninfo.Text = "Fastboot";
+                }
+                else
+                {
+                    conninfo.Text = "未连接";
+                }
+                if (conninfo.Text == "Fastboot")
+                {
+                    if (uefifilename.Text != "")
                     {
-                        MessageBox.Show("启动成功！", "提示");
+                        string file = uefifilename.Text;
+                        string shell = string.Format("boot {0}", file);
+                        CommandExecutor executer = new CommandExecutor();
+                        var result = executer.Fastboot(shell);
+                        if (result.ExitCode == 0)
+                        {
+                            MessageBox.Show("启动成功！", "提示");
+                        }
+                        else
+                        {
+                            MessageBox.Show("启动失败！", "提示");
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("启动失败！", "提示");
+                        MessageBox.Show("请选择UEFI文件！", "提示");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("请选择UEFI文件！", "提示");
+                    MessageBox.Show("设备未连接", "提示");
                 }
-            }
-            else
-            {
-                MessageBox.Show("设备未连接", "提示");
             }
         }
 

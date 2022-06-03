@@ -50,7 +50,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ADBHelper.cs" />
     <Compile Include="Executer\Calling\Adb\AdbCommand.cs" />
     <Compile Include="Executer\Calling\Adb\RealtimeShellCommand.cs" />
     <Compile Include="Executer\Calling\Adb\ShellCommand.cs" />
